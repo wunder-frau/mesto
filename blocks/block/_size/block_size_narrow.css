@@ -1,0 +1,9 @@
+/* .block_size_narrow {
+  max-width: calc(100% - 200px);
+}
+
+@media screen and (max-width: 767px) {
+  .block_size_narrow {
+    max-width: calc(100% - 38px);
+  }
+} */
