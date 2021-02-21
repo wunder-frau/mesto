@@ -1,0 +1,25 @@
+.input__bio {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  border: none;
+  padding: 10px 0 13px 5px;
+  border-bottom: 1px solid rgb(0, 0, 0, .2);
+  margin: 0 36px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1023px) {
+  .input__bio {
+    margin: 30px 22px 0;
+  }
+}
+
+.input__bio:focus {
+  border: 3px solid royalblue;
+}

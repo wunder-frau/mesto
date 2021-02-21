@@ -1,0 +1,28 @@
+.close-button {
+  color: #fff;
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  background: transparent;
+  border:none;
+  top: -36px;
+  right: -34px;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+  .close-button {
+    top: 123px;
+    width: 26px;
+    height: 26px;
+    top: -50px;
+    right:0;
+  }
+}
+
+.close-button:hover {
+  color: #FFFFFF;
+  opacity: .6;
+}

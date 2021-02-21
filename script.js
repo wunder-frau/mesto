@@ -1,14 +1,24 @@
-let elementLike = document.querySelector('.element__like');
-let elementLikeActive = document.querySelector('.element__like_active');
-let noLikeActive = document.querySelector('.element__like_active-hidden')
-console.log(noLikeActive);
+let showPopupButton = document.querySelector('#show-popup');
+let popup = document.querySelector('.popup');
+let hidePopupButton = document.querySelector('#hide-popup');
+let formElement = document.querySelector('.form');
+let submitButton = document.querySelector('.submit-button');
 
-function likeButton() {
-  elementLike.classList.remove('.element__like');
-  elementLike.classList.add('element__like_active');
+function popupToggle() {
+  popup.classList.toggle('popup__opend');
 }
 
-elementLike.addEventListener('click', likeButton);
+function formSubmitHandler (event) {
+  event.preventDefault();
+  let inputName = document.querySelector('.input__name').value;
+  let jobInput = document.querySelector('.input__bio').value;
 
-console.log(elementLike);
-console.log(elementLikeActive);
+  document.querySelector('.profile-info__title').innerHTML = inputName;
+  document.querySelector('.profile-info__subtitle').innerHTML = jobInput;
+  popup.classList.remove('popup__opend');
+}
+
+showPopupButton.addEventListener('click', popupToggle);
+hidePopupButton.addEventListener('click', popupToggle);
+formElement.addEventListener('submit', formSubmitHandler);
+

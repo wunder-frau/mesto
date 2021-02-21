@@ -13,6 +13,7 @@
   min-width: 282px;
   margin: 0 0 51px 0;
   padding: 0;
+  border: 1px solid coral;
 }
 
 @media screen and (max-width: 1023px) {
