@@ -10,8 +10,8 @@ function popupToggle() {
 
 function formSubmitHandler (event) {
   event.preventDefault();
-  let inputName = document.querySelector('.input__name').value;
-  let jobInput = document.querySelector('.input__bio').value;
+  let inputName = document.querySelector('.popup__input_name').value;
+  let jobInput = document.querySelector('.popup__input_bio').value;
 
   document.querySelector('.profile-info__title').innerHTML = inputName;
   document.querySelector('.profile-info__subtitle').innerHTML = jobInput;
