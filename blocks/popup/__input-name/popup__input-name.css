@@ -1,4 +1,4 @@
-.popup__input_bio {
+.popup__input-name{
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -15,11 +15,11 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .popup__input_bio {
+  .popup__input-name {
     margin: 0 22px;
   }
 }
 
-.popup__input_bio:focus {
+.popup__input-name:focus {
   border: 3px solid royalblue;
 }
