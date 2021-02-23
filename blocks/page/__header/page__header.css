@@ -1,20 +1,12 @@
 .page__header {
   display: flex;
   flex-direction: row;
-  min-width: 282px;
-  margin: 0;
-  margin-bottom: 40px;
+  min-width: 320px;
+  border-bottom: 1px solid #545454;
 }
 
 @media screen and (max-width: 1023px) {
   .page__header {
     margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .page__header {
-    max-width: 100%;
-    margin-bottom: 42px;
   }
 }

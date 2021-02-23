@@ -13,12 +13,11 @@
   min-width: 282px;
   margin: 0 0 51px 0;
   padding: 0;
-  border: 1px solid coral;
 }
 
 @media screen and (max-width: 1023px) {
   .profile {
     flex-direction: column;
-    margin: 0 auto 36px;
+    margin: 0 0 36px 0;
   }
 }
