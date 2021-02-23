@@ -1,7 +1,4 @@
-.input__name{
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
+.input__bio {
   font-size: 14px;
   line-height: 17px;
   color: #000000;
@@ -15,11 +12,11 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .input__name {
+  .input__bio {
     margin: 0 22px;
   }
 }
 
-.input__name:focus {
+.input__bio:focus {
   border: 3px solid royalblue;
 }
