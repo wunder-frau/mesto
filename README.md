@@ -16,6 +16,10 @@
 Фотографии, что расположены в галерее были взяты с бесплатного [ресурса unsplash.com](https://unsplash.com/)
 и оптимизированы через [ресурс](https://tinypng.com/), чтобы сайт работал быстрее.
 
+**Проект на gh-pages**
+Ссылка: [Mesto](https://wunder-frau.github.io/mesto/).
+
+
 ### Структура
 ```gitignore
 
