@@ -1,4 +1,4 @@
-.close-button {
+.form__button_close {
   color: #fff;
   font-size: 40px;
   font-weight: 900;
@@ -14,7 +14,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .close-button {
+  .form__button_close {
     width: 26px;
     height: 26px;
     top: -50px;
@@ -22,7 +22,6 @@
   }
 }
 
-.close-button:hover {
-  color: #FFFFFF;
+.form__button_close:hover {
   opacity: .6;
 }

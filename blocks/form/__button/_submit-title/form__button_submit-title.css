@@ -1,4 +1,4 @@
-.submit-button__title {
+.form__button_submit-title {
   font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -9,7 +9,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .submit-button {
+  .form__button_submit-title {
     font-size: 14px;
     line-height: 17px;
   }
