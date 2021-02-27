@@ -28,9 +28,9 @@
               <p class="profile__subtitle">Исследователь океана</p>
             </div>
           </div>
-          <button type="button" id ="show-popup" class="profile__button profile__button_edit"></button>
+          <button type="button" id ="show-popup" class="profile__edit"></button>
         </div>
-        <button type="button" class="profile__button profile__button_add"></button>
+        <button type="button" class="profile__add"></button>
       </section>
 
       <section class="elements">
@@ -82,11 +82,11 @@
 
       <section class="popup">
         <form class="form" name="profileform">
-          <button type="button" id="hide-popup" class="form__button form__button_close">&times;</button>
+          <button type="button" id="hide-popup" class="popup__close">&times;</button>
           <h2 class="form__title">Редактировать профиль</h2>
-          <input type="text" name="firstname" value="Жак-Ив Кусто" class="form__input-name">
-          <input type="text" name="surname" value="Исследователь океана" class="form__input-bio">
-          <button type="submit" class="form__button form__button_submit form__button_submit-title">Сохранить</button>
+          <input type="text" name="name" value="Жак-Ив Кусто" class="form__input form__input_name">
+          <input type="text" name="description" value="Исследователь океана" class="form__input form__input_bio">
+          <button type="submit" class="popup__submit">Сохранить</button>
         </form>
       </section>
 

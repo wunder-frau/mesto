@@ -1,8 +1,9 @@
-.profile__button_edit {
-  background: url(../../../../images/pen.svg);
+.profile__edit {
+  background: url(../../../images/pen.svg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 10px;
+  box-sizing: border-box;
   cursor: pointer;
   border: 1px solid #FFFFFF;
   width: 24px;
@@ -12,13 +13,14 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .profile__button_edit {
+  .profile__edit {
     width: 18px;
     height: 18px;
     margin: 159px 0 0 10px;
+    background-size: 7.5px;
   }
 }
 
-.profile__button_edit:hover {
+.profile__edit:hover {
   opacity: .6;
 }

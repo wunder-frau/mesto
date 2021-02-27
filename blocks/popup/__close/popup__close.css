@@ -1,7 +1,7 @@
-.form__button_close {
-  color: #fff;
+.popup__close {
   font-size: 40px;
   font-weight: 900;
+  color: #fff;
   height: 40px;
   width: 40px;
   position: absolute;
@@ -14,7 +14,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .form__button_close {
+  .popup__close {
     width: 26px;
     height: 26px;
     top: -50px;
@@ -22,6 +22,6 @@
   }
 }
 
-.form__button_close:hover {
+.popup__close:hover {
   opacity: .6;
 }
