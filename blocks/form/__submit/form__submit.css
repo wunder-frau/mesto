@@ -1,4 +1,4 @@
-.popup__submit {
+.form__submit {
   font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -17,7 +17,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .popup__submit {
+  .form__submit {
     font-size: 14px;
     line-height: 17px;
     width: 238px;
@@ -26,6 +26,6 @@
   }
 }
 
-.popup__submit:hover {
+.form__submit:hover {
   opacity: .8;
 }

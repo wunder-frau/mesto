@@ -2,7 +2,7 @@ let showPopupButton = document.querySelector('#show-popup');
 let popup = document.querySelector('.popup');
 let hidePopupButton = document.querySelector('#hide-popup');
 let formElement = document.querySelector('.form');
-let submitButton = document.querySelector('.popup__submit');
+let submitButton = document.querySelector('.form__submit');
 
 
 function popupToggle() {
