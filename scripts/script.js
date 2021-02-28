@@ -6,15 +6,15 @@ let submitButton = document.querySelector('.popup__submit');
 
 
 function popupToggle() {
-  document.querySelector('.form__input_name').value = document.querySelector('.profile__title').textContent;
-  document.querySelector('.form__input_bio').value = document.querySelector('.profile__subtitle').textContent;
+  document.querySelector('#input-name').value = document.querySelector('.profile__title').textContent;
+  document.querySelector('#input-about').value = document.querySelector('.profile__subtitle').textContent;
   popup.classList.toggle('popup_opend');
 }
 
 function formSubmitHandler (event) {
   event.preventDefault();
-  let inputName = document.querySelector('.form__input_name').value;
-  let jobInput = document.querySelector('.form__input_bio').value;
+  let inputName = document.querySelector('#input-name').value;
+  let jobInput = document.querySelector('#input-about').value;
 
   document.querySelector('.profile__title').textContent = inputName;
   document.querySelector('.profile__subtitle').textContent = jobInput;
