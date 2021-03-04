@@ -3,8 +3,48 @@ let popup = document.querySelector('.popup');
 let hidePopupButton = document.querySelector('#hide-popup');
 let formElement = document.querySelector('.form');
 let submitButton = document.querySelector('.form__submit');
+
+const elementsList = document.querySelector('.elements__list');
+const elementTemplate = document.querySelector('.element-template').content;
+
 // let elements = document.querySelector('.elements');
 // let elementLike = document.querySelector('.element__like');
+
+const initialCards = [
+  {
+    name: 'Архыз',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+  },
+  {
+    name: 'Челябинская область',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+  },
+  {
+    name: 'Иваново',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+  },
+  {
+    name: 'Камчатка',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+  },
+  {
+    name: 'Холмогорский район',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+  },
+  {
+    name: 'Байкал',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  }
+];
+
+initialCards.forEach(function (element) {
+  const cardElement = elementTemplate.cloneNode(true);
+
+  cardElement.querySelector('.element__title').textContent = element.name;
+  cardElement.querySelector('.element__image').src = element.link;
+
+  elementsList.append(cardElement)
+})
 
 function popupToggle() {
   document.querySelector('#input-name').value = document.querySelector('.profile__title').textContent;
@@ -22,6 +62,13 @@ function formSubmitHandler (event) {
   popup.classList.remove('popup_opend');
 }
 
+showPopupButton.addEventListener('click', popupToggle);
+hidePopupButton.addEventListener('click', popupToggle);
+formElement.addEventListener('submit', formSubmitHandler);
+
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
 // function likeButton() {
 //   if (elementLike.classList.contains('element__like_active')) {
 //     elementLike.classList.remove('element__like_active');
@@ -29,10 +76,5 @@ function formSubmitHandler (event) {
 //     elementLike.classList.add('element__like_active');
 //   }
 // }
-
-
-showPopupButton.addEventListener('click', popupToggle);
-hidePopupButton.addEventListener('click', popupToggle);
-formElement.addEventListener('submit', formSubmitHandler);
 // elementLike.addEventListener('click', likeButton);
 // console.log(elementLike);
