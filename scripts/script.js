@@ -3,7 +3,8 @@ let popup = document.querySelector('.popup');
 let hidePopupButton = document.querySelector('#hide-popup');
 let formElement = document.querySelector('.form');
 let submitButton = document.querySelector('.form__submit');
-
+// let elements = document.querySelector('.elements');
+// let elementLike = document.querySelector('.element__like');
 
 function popupToggle() {
   document.querySelector('#input-name').value = document.querySelector('.profile__title').textContent;
@@ -21,6 +22,17 @@ function formSubmitHandler (event) {
   popup.classList.remove('popup_opend');
 }
 
+// function likeButton() {
+//   if (elementLike.classList.contains('element__like_active')) {
+//     elementLike.classList.remove('element__like_active');
+//   } else {
+//     elementLike.classList.add('element__like_active');
+//   }
+// }
+
+
 showPopupButton.addEventListener('click', popupToggle);
 hidePopupButton.addEventListener('click', popupToggle);
 formElement.addEventListener('submit', formSubmitHandler);
+// elementLike.addEventListener('click', likeButton);
+// console.log(elementLike);
