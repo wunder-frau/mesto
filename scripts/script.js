@@ -3,12 +3,14 @@ let popup = document.querySelector('.popup');
 let hidePopupButton = document.querySelector('#hide-popup');
 let formElement = document.querySelector('.form');
 let submitButton = document.querySelector('.form__submit');
+const addButton = document.querySelector('.profile__add');
+const popupAdd = document.querySelector('#popup-2');
+
 
 const elementsList = document.querySelector('.elements__list');
 const elementTemplate = document.querySelector('.element-template').content;
 
-// let elements = document.querySelector('.elements');
-// let elementLike = document.querySelector('.element__like');
+/* ----------------------------------------------------------------------------------------------------------------- */
 
 const initialCards = [
   {
@@ -46,35 +48,36 @@ initialCards.forEach(function (element) {
   elementsList.append(cardElement)
 })
 
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+
 function popupToggle() {
-  document.querySelector('#input-name').value = document.querySelector('.profile__title').textContent;
-  document.querySelector('#input-about').value = document.querySelector('.profile__subtitle').textContent;
   popup.classList.toggle('popup_opend');
 }
 
-function formSubmitHandler (event) {
+showPopupButton.addEventListener('click', function () {
+  document.querySelector('#input-name').value = document.querySelector('.profile__title').textContent;
+  document.querySelector('#input-about').value = document.querySelector('.profile__subtitle').textContent;
+  popupToggle(showPopupButton); // открываем попап редактирования
+});
+
+addButton.addEventListener('click', function () {
+  document.querySelector('#input-card').textContent;
+  document.querySelector('#input-about').textContent;
+  popupToggle(popupAdd); // открываем попап добавления
+}); 
+
+
+formElement.addEventListener('submit', function formSubmitHandler(event) {
   event.preventDefault();
-  let inputName = document.querySelector('#input-name').value;
-  let jobInput = document.querySelector('#input-about').value;
-
-  document.querySelector('.profile__title').textContent = inputName;
-  document.querySelector('.profile__subtitle').textContent = jobInput;
+  document.querySelector('.profile__title').textContent = document.querySelector('#input-name').value;
+  document.querySelector('.profile__subtitle').textContent = document.querySelector('#input-about').value;
   popup.classList.remove('popup_opend');
-}
+});
 
-showPopupButton.addEventListener('click', popupToggle);
-hidePopupButton.addEventListener('click', popupToggle);
-formElement.addEventListener('submit', formSubmitHandler);
 
+hidePopupButton.addEventListener('click', function() {
+  popupToggle(hidePopupButton);
+});
 
 /* ----------------------------------------------------------------------------------------------------------------- */
-
-// function likeButton() {
-//   if (elementLike.classList.contains('element__like_active')) {
-//     elementLike.classList.remove('element__like_active');
-//   } else {
-//     elementLike.classList.add('element__like_active');
-//   }
-// }
-// elementLike.addEventListener('click', likeButton);
-// console.log(elementLike);
