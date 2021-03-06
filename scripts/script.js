@@ -1,14 +1,20 @@
+function popupToggle(popupElement) {
+  popupElement.classList.toggle('popup_opend');
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
 let showPopupButton = document.querySelector('#show-popup');
-let popup = document.querySelector('.popup');
 let hidePopupButton = document.querySelector('#hide-popup');
 let formElement = document.querySelector('.form');
 let submitButton = document.querySelector('.form__submit');
 const addButton = document.querySelector('.profile__add');
-const popupAdd = document.querySelector('#popup-2');
-
 
 const elementsList = document.querySelector('.elements__list');
 const elementTemplate = document.querySelector('.element-template').content;
+
+const popupProfile = document.querySelector('.popup_type_add');
+const popupCard = document.querySelector('.popup_type_edit');
 
 /* ----------------------------------------------------------------------------------------------------------------- */
 
@@ -51,28 +57,32 @@ initialCards.forEach(function (element) {
 /* ----------------------------------------------------------------------------------------------------------------- */
 
 
-function popupToggle() {
-  popup.classList.toggle('popup_opend');
-}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+
 
 showPopupButton.addEventListener('click', function () {
+  document.querySelector('#input-name_title');
   document.querySelector('#input-name').value = document.querySelector('.profile__title').textContent;
   document.querySelector('#input-about').value = document.querySelector('.profile__subtitle').textContent;
-  popupToggle(showPopupButton); // открываем попап редактирования
+  popupToggle(popupProfile); // открываем попап редактирования
 });
 
 addButton.addEventListener('click', function () {
-  document.querySelector('#input-card').textContent;
-  document.querySelector('#input-about').textContent;
-  popupToggle(popupAdd); // открываем попап добавления
-}); 
+  document.querySelector('#input-name_place');
+  document.querySelector('#input-card').value;
+  document.querySelector('#input-link').value;
+  popupToggle(popupCard); // открываем попап добавления
+  console.log(popupCard);
+});
 
 
 formElement.addEventListener('submit', function formSubmitHandler(event) {
   event.preventDefault();
   document.querySelector('.profile__title').textContent = document.querySelector('#input-name').value;
   document.querySelector('.profile__subtitle').textContent = document.querySelector('#input-about').value;
-  popup.classList.remove('popup_opend');
+  popupElement.classList.remove('popup_opend');
 });
 
 
