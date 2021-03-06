@@ -39,3 +39,5 @@
 @import url(../blocks/form/__input/form__input.css);
 @import url(../blocks/popup/_type_edit/popup_type_edit.css);
 @import url(../blocks/popup/_type_add/popup_type_add.css);
+@import url(../blocks/form/__close/_add/form__close_add.css);
+@import url(../blocks/form/__close/_edit/form__close_edit.css);

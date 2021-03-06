@@ -1,23 +1,18 @@
-function popupToggle(popupElement) {
-  popupElement.classList.toggle('popup_opend');
-}
+let editPopupButton = document.querySelector('#show-popup'); // open1
+let addCardPopupButton = document.querySelector('.profile__add'); //open2
 
-/* ----------------------------------------------------------------------------------------------------------------- */
+let popup = document.querySelector('.popup');
+let hideEditPopup = document.querySelector('.popup_type_edit'); // close1
+let hideAddCardPopup = document.querySelector('.popup_type_add'); // close2
 
-let showPopupButton = document.querySelector('#show-popup');
-let hidePopupButton = document.querySelector('#hide-popup');
 let formElement = document.querySelector('.form');
 let submitButton = document.querySelector('.form__submit');
-const addButton = document.querySelector('.profile__add');
+
+const popupProfile = document.querySelector('.popup_type_edit');
+const popupCard = document.querySelector('.popup_type_add');
 
 const elementsList = document.querySelector('.elements__list');
 const elementTemplate = document.querySelector('.element-template').content;
-
-const popupProfile = document.querySelector('.popup_type_add');
-const popupCard = document.querySelector('.popup_type_edit');
-
-/* ----------------------------------------------------------------------------------------------------------------- */
-
 const initialCards = [
   {
     name: 'Архыз',
@@ -45,6 +40,18 @@ const initialCards = [
   }
 ];
 
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+function popupToggle(popupElement) {
+  popupElement.classList.toggle('popup_opend');
+}
+
+function popupClose(popupElement) {
+  popupElement.classList.remove('popup_opend');
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
 initialCards.forEach(function (element) {
   const cardElement = elementTemplate.cloneNode(true);
 
@@ -54,40 +61,38 @@ initialCards.forEach(function (element) {
   elementsList.append(cardElement)
 })
 
-/* ----------------------------------------------------------------------------------------------------------------- */
 
-
-
-/* ----------------------------------------------------------------------------------------------------------------- */
-
-
-
-showPopupButton.addEventListener('click', function () {
+editPopupButton.addEventListener('click', function () {
   document.querySelector('#input-name_title');
   document.querySelector('#input-name').value = document.querySelector('.profile__title').textContent;
   document.querySelector('#input-about').value = document.querySelector('.profile__subtitle').textContent;
   popupToggle(popupProfile); // открываем попап редактирования
 });
 
-addButton.addEventListener('click', function () {
+addCardPopupButton.addEventListener('click', function () {
   document.querySelector('#input-name_place');
   document.querySelector('#input-card').value;
   document.querySelector('#input-link').value;
   popupToggle(popupCard); // открываем попап добавления
-  console.log(popupCard);
 });
 
+// here
+
+hideEditPopup.addEventListener('click', function () {
+  popupClose(popupProfile);
+});
+
+hideAddCardPopup.addEventListener('click', function () {
+  popupClose(popupCard);
+});
 
 formElement.addEventListener('submit', function formSubmitHandler(event) {
   event.preventDefault();
-  document.querySelector('.profile__title').textContent = document.querySelector('#input-name').value;
-  document.querySelector('.profile__subtitle').textContent = document.querySelector('#input-about').value;
-  popupElement.classList.remove('popup_opend');
-});
-
-
-hidePopupButton.addEventListener('click', function() {
-  popupToggle(hidePopupButton);
+    let inputName = document.querySelector('#input-name').value;
+    let jobInput = document.querySelector('#input-about').value;
+  
+    document.querySelector('.profile__title').textContent = inputName;
+    document.querySelector('.profile__subtitle').textContent = jobInput;
 });
 
 /* ----------------------------------------------------------------------------------------------------------------- */
