@@ -40,7 +40,7 @@
       </section>
 
       <section class="popup popup_type_edit" id="#popup__profile">
-        <form class="form" name="profileform">
+        <form class="form form__profile" name="profileform">
           <button type="button" id="hide-popup" class="form__close form__close_edit">&times;</button>
           <h2 class="form__title" id="input-name_title" >Редактировать профиль</h2>
           <input type="text" id="input-name" name="name" value="Жак-Ив Кусто" class="form__input">
@@ -50,11 +50,11 @@
       </section>
 
       <section class="popup popup_type_add" id="#popup__card">
-        <form class="form" name="profileform">
+        <form class="form form__card_add" name="profileform">
           <button type="button" id="hide-popup" class="form__close form__close_add">&times;</button>
           <h2 class="form__title" id="input-name_place">Новое место</h2>
-          <input type="text" id="input-card" name="card" value="Название" class="form__input">
-          <input type="text" id="input-link" name="link" value="Ссылка на картинку" class="form__input">
+          <input type="text" id="input-card" name="card" value="Название" class="form__input form__input_type_card-name">
+          <input type="text" id="input-link" name="link" value="Ссылка на картинку" class="form__input form__input_type_card-link">
           <button type="submit" class="form__submit form__submit_add">Сохранить</button>
         </form>
       </section>

@@ -43,3 +43,7 @@
 @import url(../blocks/form/__close/_edit/form__close_edit.css);
 @import url(../blocks/form/__submit/_add/form__submit_add.css);
 @import url(../blocks/form/__submit/_edit/form__submit_edit.css);
+@import url(../blocks/form/__input/_type_card-name/form__input_type_card-name.css);
+@import url(../blocks/form/__input/_type_card-link/form__input_type_card-link.css);
+@import url(../blocks/form/__profile/form__profile.css);
+@import url(../blocks/form/__card_add/form__card_add.css);
