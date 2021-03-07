@@ -14,6 +14,12 @@ function popupClose(popupElement) {
   popupElement.classList.remove('popup_opend');
 }
 
+function cardLike(cardElement) {
+  cardElement.querySelector('.element__like').addEventListener('click', function (event) {
+    event.target.classList.toggle('element__like_active');
+  }); 
+}
+
 /* ----------------------------------------------------------------------------------------------------------------- */
 
 const initialCards = [
@@ -48,6 +54,8 @@ initialCards.forEach(function (element) {
   cardElement.querySelector('.element__title').textContent = element.name;
   cardElement.querySelector('.element__image').src = element.link;
   cardElement.querySelector('.element__image').alt = element.name;
+
+  cardLike(cardElement);
 
   elementsList.append(cardElement);
 });
@@ -102,6 +110,7 @@ formCardAdd.addEventListener('submit', function (event) {
   cardElement.querySelector('.element__image').src = link;
   cardElement.querySelector('.element__image').alt = cardName;
 
+  cardLike(cardElement);
   elementsList.prepend(cardElement);
 
   popupClose(popupCard);
