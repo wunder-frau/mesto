@@ -45,3 +45,5 @@
 @import url(../blocks/form/__input/_type_card-link/form__input_type_card-link.css);
 @import url(../blocks/form/__profile/form__profile.css);
 @import url(../blocks/form/__card_add/form__card_add.css);
+@import url(../blocks/element/__delete/element__delete.css);
+@import url(../blocks/element/__delete/_active/element__delete_active.css);

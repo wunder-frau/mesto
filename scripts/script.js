@@ -20,6 +20,13 @@ function cardLike(cardElement) {
   }); 
 }
 
+function cardDelete(cardElement) {
+  const deleteButton = cardElement.querySelector('.element__delete');
+  deleteButton.addEventListener('click', function () {
+    deleteButton.closest('.element').remove();
+  });
+}
+
 /* ----------------------------------------------------------------------------------------------------------------- */
 
 const initialCards = [
@@ -56,8 +63,8 @@ initialCards.forEach(function (element) {
   cardElement.querySelector('.element__image').alt = element.name;
 
   cardLike(cardElement);
-
-  elementsList.append(cardElement);
+  cardDelete(cardElement);
+  elementsList.append(cardElement); 
 });
 
 let editPopupButton = document.querySelector('#show-popup');
@@ -111,6 +118,7 @@ formCardAdd.addEventListener('submit', function (event) {
   cardElement.querySelector('.element__image').alt = cardName;
 
   cardLike(cardElement);
+  cardDelete(cardElement);
   elementsList.prepend(cardElement);
 
   popupClose(popupCard);
