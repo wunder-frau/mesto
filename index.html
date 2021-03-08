@@ -41,7 +41,7 @@
 
       <section class="popup popup_type_edit" id="#popup__profile">
         <form class="form form__profile" name="profileform">
-          <button type="button" id="hide-popup" class="form__close form__close_edit">&times;</button>
+          <button type="button" class="form__close form__close_edit">&times;</button>
           <h2 class="form__title" id="input-name_title" >Редактировать профиль</h2>
           <input type="text" id="input-name" name="name" value="Жак-Ив Кусто" class="form__input">
           <input type="text" id="input-about" name="description" value="Исследователь океана" class="form__input">
@@ -51,7 +51,7 @@
 
       <section class="popup popup_type_add" id="#popup__card">
         <form class="form form__card_add" name="profileform">
-          <button type="button" id="hide-popup" class="form__close form__close_add">&times;</button>
+          <button type="button" class="form__close form__close_add">&times;</button>
           <h2 class="form__title" id="input-name_place">Новое место</h2>
           <input type="text" id="input-card" name="card" value="Название" class="form__input form__input_type_card-name">
           <input type="text" id="input-link" name="link" value="Ссылка на картинку" class="form__input form__input_type_card-link">
@@ -59,6 +59,12 @@
         </form>
       </section>
 
+      <section class="popup-image">
+        <div class="popup-image__container">
+          <img src="#" alt=" " class="popup-image__image">
+          <h2 class="popup-image__title"></h2>
+        </div>
+      </section>
     </main>
 
     <footer class="page__footer footer">
