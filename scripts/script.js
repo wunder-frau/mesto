@@ -1,6 +1,5 @@
 const popupProfile = document.querySelector('.popup_type_edit');
 const popupCard = document.querySelector('.popup_type_add');
-const popupImage = document.querySelector('.popup__image');
 
 const elementsList = document.querySelector('.elements__list');
 const elementTemplate = document.querySelector('.element-template').content;
@@ -26,6 +25,27 @@ function cardDelete(cardElement) {
   deleteButton.addEventListener('click', function () {
     deleteButton.closest('.element').remove();
   });
+}
+
+function cardPopup(cardElement) {
+  let popupImage = cardElement.querySelector('.popup__image');
+
+  // Open
+  cardElement.querySelector('.element__image').addEventListener('click', function (event) {
+    event.preventDefault();
+    popupImage.classList.toggle('popup__image_opend');
+  });
+
+  // Close
+  let hideImagePopup = cardElement.querySelector('.image-container__close');
+  hideImagePopup.addEventListener('click', function () {
+    popupImage.classList.remove('popup__image_opend');
+  });
+
+  // Pop-up content
+  cardElement.querySelector('.image-container__title').textContent = cardElement.querySelector('.element__title').textContent;
+  cardElement.querySelector('.image-container__image').src = cardElement.querySelector('.element__image').src;
+  cardElement.querySelector('.image-container__image').alt = cardElement.querySelector('.element__image').alt;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------- */
@@ -65,8 +85,12 @@ initialCards.forEach(function (element) {
 
   cardLike(cardElement);
   cardDelete(cardElement);
-  elementsList.append(cardElement); 
+  cardPopup(cardElement);
+  elementsList.append(cardElement);
 });
+
+
+/* Кнопки открытия попапов */
 
 let editPopupButton = document.querySelector('#show-popup');
 editPopupButton.addEventListener('click', function () {
@@ -84,6 +108,9 @@ addCardPopupButton.addEventListener('click', function () {
   popupToggle(popupCard); // открываем попап добавления
 });
 
+
+/* Кнопки закрытия попапов */
+
 let hideEditPopup = document.querySelector('.form__close_edit');
 hideEditPopup.addEventListener('click', function () {
   popupClose(popupProfile);
@@ -94,10 +121,8 @@ hideAddCardPopup.addEventListener('click', function () {
   popupClose(popupCard);
 });
 
-let hideImagePopup = document.querySelector('.image-container__close');
-hideImagePopup.addEventListener('click', function () {
-  popupImage.classList.remove('popup__image_opend');
-});
+
+/* Кнопки редактировния профиля и добавления карточки */
 
 let formProfile = document.querySelector('.form__profile');
 formProfile.addEventListener('submit', function (event) {
@@ -125,6 +150,7 @@ formCardAdd.addEventListener('submit', function (event) {
 
   cardLike(cardElement);
   cardDelete(cardElement);
+  cardPopup(cardElement);
   elementsList.prepend(cardElement);
 
   popupClose(popupCard);
