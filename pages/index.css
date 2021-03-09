@@ -43,11 +43,10 @@
 @import url(../blocks/form/__submit/_edit/form__submit_edit.css);
 @import url(../blocks/form/__input/_type_card-name/form__input_type_card-name.css);
 @import url(../blocks/form/__input/_type_card-link/form__input_type_card-link.css);
-@import url(../blocks/form/__profile/form__profile.css);
-@import url(../blocks/form/__card_add/form__card_add.css);
+@import url(../blocks/form/_profile/form_profile.css);
+@import url(../blocks/form/_card_add/form_card_add.css);
 @import url(../blocks/element/__delete/element__delete.css);
 @import url(../blocks/element/__delete/_active/element__delete_active.css);
-
 @import url(../blocks/popup/__image/popup__image.css);
 @import url(../blocks/popup/__image/_opend/popup__image_opend.css);
 @import url(../blocks/image-container/image-container.css);

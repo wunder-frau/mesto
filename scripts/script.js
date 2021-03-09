@@ -119,7 +119,7 @@ document.querySelector('.form__close_add').addEventListener('click', function ()
 
 /* Кнопки редактировния профиля и добавления карточки */
 
-document.querySelector('.form__profile').addEventListener('submit', function (event) {
+document.querySelector('.form_profile').addEventListener('submit', function (event) {
   event.preventDefault();
   const inputName = document.querySelector('#input-name').value;
   const jobInput = document.querySelector('#input-about').value;
@@ -130,7 +130,7 @@ document.querySelector('.form__profile').addEventListener('submit', function (ev
   closePopup(popupProfile);
 });
 
-document.querySelector('.form__card_add').addEventListener('submit', function (event) {
+document.querySelector('.form_card_add').addEventListener('submit', function (event) {
   event.preventDefault();
   const cardName = document.querySelector('.form__input_type_card-name').value;
   const link = document.querySelector('.form__input_type_card-link').value;
