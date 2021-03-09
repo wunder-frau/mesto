@@ -7,10 +7,6 @@
   bottom: 0;
   right: 0;
   position: fixed;
-}
-
-
-.popup {
   transition: opacity .8s, visibility .8s ease;
   visibility: hidden;
   opacity: 0;

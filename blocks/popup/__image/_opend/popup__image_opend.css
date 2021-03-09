@@ -1,8 +1,5 @@
 .popup__image_opend {
   display: flex;
-}
-
-.popup__image_opend {
   visibility: visible;
   opacity: 1;
 }
