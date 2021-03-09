@@ -1,3 +1,11 @@
 .popup_opend {
   display: flex;
 }
+
+.popup_opend {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+

@@ -1,17 +1,15 @@
 .image-container {
   display: flex;
   flex-direction: column;
-  height: 78vh;
+  max-width: 75vh;
+  max-height: 75vh;
   top: 90px;
-  bottom: 68px;
-  background-color: palevioletred;
-  position: relative;
+  position: fixed;
   box-sizing: border-box;
 }
 
 @media screen and (max-width: 1023px) {
   .image-container {
     width: 282px;
-    height: 322px;
   }
 }
