@@ -6,12 +6,24 @@ const elementTemplate = document.querySelector('.element-template').content;
 
 /* ----------------------------------------------------------------------------------------------------------------- */
 
+function setCardLikeHandler(event) {
+  event.target.classList.toggle('element__like_active');
+}
+
+function setDeleteCardHandler(event) {
+  event.target.closest('.element').remove();
+}
+
 function createCard(title, image) {
   const cardElement = elementTemplate.cloneNode(true);
 
   cardElement.querySelector('.element__title').textContent = title;
   cardElement.querySelector('.element__image').src = image;
   cardElement.querySelector('.element__image').alt = title;
+
+  cardElement.querySelector('.element__like').addEventListener('click', setCardLikeHandler);
+  cardElement.querySelector('.element__delete').addEventListener('click', setDeleteCardHandler);
+
   return cardElement;
 }
 
@@ -21,19 +33,6 @@ function openPopup(popupElement) {
 
 function closePopup(popupElement) {
   popupElement.classList.remove('popup_opend');
-}
-
-function setCardLike(cardElement) {
-  cardElement.querySelector('.element__like').addEventListener('click', function (event) {
-    event.target.classList.toggle('element__like_active');
-  }); 
-}
-
-function deleteCard(cardElement) {
-  const trashButton = cardElement.querySelector('.element__delete');
-  trashButton.addEventListener('click', function () {
-    trashButton.closest('.element').remove();
-  });
 }
 
 function createCardPopup(cardElement) {
@@ -64,8 +63,6 @@ function createCardPopup(cardElement) {
 initialCards.forEach(function (element) {
   const cardElement = createCard(element.name, element.link);
 
-  setCardLike(cardElement);
-  deleteCard(cardElement);
   createCardPopup(cardElement);
   elementsList.append(cardElement);
 });
@@ -77,8 +74,6 @@ document.querySelector('.form_card_add').addEventListener('submit', function (ev
 
   const cardElement = createCard(cardName, link);
 
-  setCardLike(cardElement);
-  deleteCard(cardElement);
   createCardPopup(cardElement);
   elementsList.prepend(cardElement);
   
