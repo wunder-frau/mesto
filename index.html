@@ -53,10 +53,18 @@
         <form class="form form_card_add" name="profileform">
           <button type="button" class="form__close form__close_add">&times;</button>
           <h2 class="form__title" id="input-name_place">Новое место</h2>
-          <input type="text" id="input-card" name="card" value="Название" class="form__input form__input_type_card-name">
-          <input type="text" id="input-link" name="link" value="Ссылка на картинку" class="form__input form__input_type_card-link">
+          <input type="text" id="input-card" name="card" placeholder="Название" class="form__input form__input_type_card-name">
+          <input type="text" id="input-link" name="link" placeholder="Ссылка на картинку" class="form__input form__input_type_card-link">
           <button type="submit" class="form__submit form__submit_add">Сохранить</button>
         </form>
+      </section>
+
+      <section class="popup popup_type_image">
+        <div class="image-container">
+          <button type="button" class="image-container__close">&times;</button>
+          <img src="#" alt=" " class="image-container__image">
+          <h2 class="image-container__title"></h2>
+        </div>
       </section>
 
     </main>
@@ -76,7 +84,7 @@
         </div>
       </li>
 
-      <section class="popup__image">
+      <section class="popup popup_type_image">
         <div class="image-container">
           <button type="button" class="image-container__close">&times;</button>
           <img src="#" alt=" " class="image-container__image">
@@ -87,6 +95,7 @@
     </template>
 
   </div>
+  <script src="./scripts/initial-сards.js"></script>
   <script src="./scripts/script.js"></script>
 </body>
 </html>

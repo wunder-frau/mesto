@@ -47,8 +47,8 @@
 @import url(../blocks/form/_card_add/form_card_add.css);
 @import url(../blocks/element/__delete/element__delete.css);
 @import url(../blocks/element/__delete/_active/element__delete_active.css);
-@import url(../blocks/popup/__image/popup__image.css);
-@import url(../blocks/popup/__image/_opend/popup__image_opend.css);
+
+@import url(../blocks/popup/_type_image/popup_type_image.css);
 @import url(../blocks/image-container/image-container.css);
 @import url(../blocks/image-container/__image/image-container__image.css);
 @import url(../blocks/image-container/__title/image-container__title.css);
