@@ -24,7 +24,7 @@ function setPopupImageCardHandler(event) {
   const target = event.target;
   containerImage.src = target.src;
   containerTitle.textContent = target.closest('.element').textContent;
-  containerTitle.alt = target.alt;
+  containerImage.alt = target.alt;
 
   openPopup(popupImage);
 };
